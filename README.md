@@ -72,3 +72,11 @@ export default {
   modules: ['@nuxtjs/tailwindcss']
 }
 ```
+
+
+If you're going to create your own Tailwind CSS file, make sure to add the @tailwind directives for each of Tailwind’s layers.
+```bash
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
