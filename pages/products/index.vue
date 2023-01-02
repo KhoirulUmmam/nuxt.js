@@ -2,10 +2,10 @@
     <div>
         <div v-if="products.length > 0" class="grid grid-cols-4 gap-5">
             <div v-for="p in products">
-                <NuxtLink :to="`/products/${p.id}`">{{ p.title }}</NuxtLink>
+                <ProductCard :product="p"/>
             </div>
         </div>
-        <div v-else>
+        <div v-else class="font-bold">
             Data kosong
         </div>
     </div>
@@ -16,7 +16,7 @@
         layout: 'products'
     })
 
-    const {data: products} = await useFetch('https://fakestoreapi.com/products')
+    const {data: products} = await useFetch('https://fakestoreapi.com/products/')
 </script>
 
 <style scoped>
