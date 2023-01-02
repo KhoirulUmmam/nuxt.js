@@ -1,6 +1,13 @@
 <template>
     <div>
-        <p>Products</p>
+        <div v-if="products.length > 0" class="grid grid-cols-4 gap-5">
+            <div v-for="p in products">
+                <NuxtLink :to="`/products/${p.id}`">{{ p.title }}</NuxtLink>
+            </div>
+        </div>
+        <div v-else>
+            Data kosong
+        </div>
     </div>
 </template>
 
@@ -8,6 +15,8 @@
     definePageMeta({
         layout: 'products'
     })
+
+    const {data: products} = await useFetch('https://fakestoreapi.com/products')
 </script>
 
 <style scoped>
