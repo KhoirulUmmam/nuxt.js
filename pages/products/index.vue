@@ -16,7 +16,15 @@
         layout: 'products'
     })
 
+    // fetch products
     const {data: products} = await useFetch('https://fakestoreapi.com/products/')
+
+    useHead({
+        title: 'Shiro Store | Voucher',
+        meta:[
+            { name: 'description', content: 'Paket A' }
+        ]
+    })
 </script>
 
 <style scoped>
