@@ -7,18 +7,31 @@
                 <h1 class="text-3xl text-white font-bold text-center mb-4 cursor-pointer">LOGIN</h1>
                 <p class="w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer">Log in using an account that has been registered</p>
             </div>
-            <div class="space-y-4">
-                 <input type="text" v-model="form.email" placeholder="Email Address" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
-                 <input type="text" v-model="form.password" placeholder="Password" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+            <form @submit.prevent="submit">
+                <div class="space-y-4">
+                 <input 
+                    type="email" 
+                    v-model="form.email" 
+                    placeholder="Email Address" 
+                    required
+                    class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+                 <input 
+                    type="password" 
+                    v-model="form.password"
+                    placeholder="Password" 
+                    autocomplete="current-password"
+                    required
+                    class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
             </div>
             <div class="mt-6 flex flex-wrap justify-center">
                 
                 <p class="text-xs font-semibold text-white"><NuxtLink to="#">Forgot Password?</NuxtLink></p>
             </div>
 			<div class="text-center mt-6 text-white">
-				<button class="py-3 w-64 text-xl text-white bg-violet-900 rounded-2xl">Login</button>
+				<button type="submit" class="py-3 w-64 text-xl text-white bg-violet-900 rounded-2xl">Login</button>
 				<p class="mt-8justify-around my-4 text-sm">Need an Account? <span class="underline font-bold"><NuxtLink to="/auth/register"> Sign In</NuxtLink></span></p>
 			</div>
+            </form>
 		</div>
 	</div>
 </template>
@@ -32,19 +45,22 @@
         },
         errors: []
     }),
-    methods: {
-        async submit() {
-            try {
-                await this.$axios.$get('sanctum/csrf-cookie')
-                await this.$auth.loginWith('laravelSanctum', {data: this.form})
-            } catch (error) {
-                this.errors = error.response.data.errors
+    async mounted() {
+        this.$axios.$get('/sanctum/csrf-cookie');
+    },
+    methods:{
+        async submit(){
+            try{
+                const formData = new FormData(this.$refs.loginForm);
+                await this.$auth.loginWith('laravelSanctum',{data:formData});
+                console.log('user login');
+                this.$router.push({
+                    path:'/',
+                });
+            }catch(e){
+                console.log(e);
             }
         }
     }
- }
+ };
 </script>
-
-<style scoped>
-
-</style>
