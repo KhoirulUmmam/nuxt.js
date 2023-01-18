@@ -1,28 +1,26 @@
 <template>
-    <div class="container mx-auto flex flex-col justify-center items-center min-h-screen">
-        <div class="bg-violet-900 py-8 px-8 rounded w-2/3 xl:w-1/2">
-            <span class="text-red-400 italic" v-if="errors.email">{{ errors.email[0] }}</span>
-            <h1 class="text-white text-3xl text-center tracking-wider uppercase underline">LOGIN</h1>
-            <form @submit.prevent="submit">
-                <div class="flex flex-col mt-4">
-                    <label class="text-gray-50">Email</label>
-                    <input type="text" v-model="form.email" class="px-2 py-1 rounded" placeholder="Email">
-                </div>
-                <div class="flex flex-col mt-4">
-                    <label class="text-gray-50">Password</label>
-                    <input type="text" v-model="form.password" class="px-2 py-1 rounded" placeholder="Password">
-                </div>
-                <div class="flex flex-col mt-4">
-                    <button type="submit" class="inline-flex items-center justify-center px-4 py-2 bg-gray-500 border border-transparent rounded-md font-semibold text-gray-50 uppercase tracking-wider hover:bg-gray-300 hover:text-gray-800 focus-outline-none focus:border-gray-700 focus:shadow-outline-blue active:bg-gray-300 transition ease-in-out duration-150">Submit</button>
-                </div>
-                <div class="flex justify-around my-4">
-                    <NuxtLink to="#" class="text-white hover:text-blue-300">Forgot Password??</NuxtLink>
-                    <NuxtLink to="/auth/register" class="text-white hover:text-blue-300">Need an account?</NuxtLink>
-                </div>
-            
-            </form>
-        </div>
-    </div>
+    <!-- component -->
+    <div class="min-h-screen flex justify-center items-center">
+        <div class="py-12 px-12 bg-white rounded-2xl shadow-xl z-20 bg-violet-500">
+            <div>
+                <span class="text-red-400 italic" v-if="errors.email">{{ errors.email[0] }}</span>
+                <h1 class="text-3xl text-white font-bold text-center mb-4 cursor-pointer">LOGIN</h1>
+                <p class="w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer">Log in using an account that has been registered</p>
+            </div>
+            <div class="space-y-4">
+                 <input type="text" v-model="form.email" placeholder="Email Address" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+                 <input type="text" v-model="form.password" placeholder="Password" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+            </div>
+            <div class="mt-6 flex flex-wrap justify-center">
+                
+                <p class="text-xs font-semibold text-white"><NuxtLink to="#">Forgot Password?</NuxtLink></p>
+            </div>
+			<div class="text-center mt-6 text-white">
+				<button class="py-3 w-64 text-xl text-white bg-violet-900 rounded-2xl">Login</button>
+				<p class="mt-8justify-around my-4 text-sm">Need an Account? <span class="underline font-bold"><NuxtLink to="/auth/register"> Sign In</NuxtLink></span></p>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
