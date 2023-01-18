@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto flex flex-col justify-center items-center min-h-screen">
-        <div class="bg-gray-700 py-8 px-8 rounded w-2/3 xl:w-1/2">
-            <h1 class="text-dark text-3xl text-center tracking-wider uppercase underline italic">Register</h1>
+        <div class="bg-violet-900 py-8 px-8 rounded w-2/3 xl:w-1/2">
+            <h1 class="text-white text-3xl text-center tracking-wider uppercase underline">REGISTER</h1>
             <form @submit.prevents="submit">
                 <div class="flex flex-col mt-4">
                     <label class="text-gray-50">Name</label>

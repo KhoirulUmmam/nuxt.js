@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>List of Steaks</h2>
-        <div class="grid grid-cols-4 gap-5">
+        <div class="grid grid-cols-3 gap-5">
             <div 
                 v-for="s in steaks"
                 :key="s"

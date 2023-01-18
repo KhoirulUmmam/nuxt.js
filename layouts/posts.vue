@@ -17,7 +17,7 @@
         </header>
 
         <!-- output the page content of posts -->
-        <div class="container mx-auto py-4 px-8 mb-8">
+        <div class="container mx-auto py-4 px-8 mb-8 justify-center">
             <slot />
         </div>
     </div>
