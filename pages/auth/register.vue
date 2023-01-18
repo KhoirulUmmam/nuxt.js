@@ -2,7 +2,7 @@
     <div class="container mx-auto flex flex-col justify-center items-center min-h-screen">
         <div class="bg-violet-900 py-8 px-8 rounded w-2/3 xl:w-1/2">
             <h1 class="text-white text-3xl text-center tracking-wider uppercase underline">REGISTER</h1>
-            <form @submit.prevents="submit">
+            <form @submit.prevent="submit">
                 <div class="flex flex-col mt-4">
                     <label class="text-gray-50">Name</label>
                     <input type="text" v-model="form.name" class="px-2 py-1 rounded" placeholder="Name" autofocus>

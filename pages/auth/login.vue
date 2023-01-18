@@ -3,7 +3,7 @@
         <div class="bg-violet-900 py-8 px-8 rounded w-2/3 xl:w-1/2">
             <span class="text-red-400 italic" v-if="errors.email">{{ errors.email[0] }}</span>
             <h1 class="text-white text-3xl text-center tracking-wider uppercase underline">LOGIN</h1>
-            <form @submit.prevents="submit">
+            <form @submit.prevent="submit">
                 <div class="flex flex-col mt-4">
                     <label class="text-gray-50">Email</label>
                     <input type="text" v-model="form.email" class="px-2 py-1 rounded" placeholder="Email">
