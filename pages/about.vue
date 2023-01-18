@@ -9,7 +9,7 @@
 
 <script setup>
 
-    const { data } = await useFetch('/api/currency/ZAR')
+    const { data } = await useFetch('/api/currency/')
 
 </script>
 

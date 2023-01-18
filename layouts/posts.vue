@@ -2,7 +2,7 @@
     <div>
         <header class="shadow-sm bg-white">
             <nav class="container mx-auto py-4 px-8 mb-6 flex justify-between">
-                <NuxtLink to="/" class="font-bold">Nuxt Shiro</NuxtLink>
+                <NuxtLink class="font-bold">Shiro Store</NuxtLink>
                 <ul class="flex gap-4">
                     <li><NuxtLink to ="/">Home</NuxtLink></li>
                     <li><NuxtLink to ="/about">About</NuxtLink></li>
@@ -16,16 +16,15 @@
             </nav>
         </header>
 
-        <!-- output the page content -->
+        <!-- output the page content of posts -->
         <div class="container mx-auto py-4 px-8 mb-8">
-            <NuxtPage />
+            <slot />
         </div>
     </div>
 </template>
 
-
 <style scoped>
-    .router-link-exact-active{
+    .router-link-exact-active {
         color: aquamarine;
     }
 </style>

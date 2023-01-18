@@ -2,7 +2,7 @@
     <div>
         <header class="shadow-sm bg-white">
             <nav class="container mx-auto p-4">
-                <NuxtLink to="/products" class="font-bold">Shiro Store</NuxtLink>
+                <NuxtLink to="/" class="font-bold">Shiro Store</NuxtLink>
             </nav>
         </header>
 
@@ -16,6 +16,10 @@
                 <li><NuxtLink to ="/">Home</NuxtLink></li>
                 <li><NuxtLink to ="/about">About</NuxtLink></li>
                 <li><NuxtLink to ="/products">Products</NuxtLink></li>
+                <li><NuxtLink to ="/posts">Post</NuxtLink></li>
+                <li><NuxtLink to ="https://shiroostore.netlify.app/" target="_blank">Partnership</NuxtLink></li>
+                <li><NuxtLink to ="/auth/register">REGISTER</NuxtLink></li>
+                <li><NuxtLink to ="/auth/login">LOGIN</NuxtLink></li>
             </ul>
         </footer>
     </div>
