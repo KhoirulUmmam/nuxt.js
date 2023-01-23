@@ -138,7 +138,7 @@
 			steak.value = JSON.parse(
 				JSON.stringify({ ...item, published: item.published.substring(0, 10) })
 			);
-			// authors.value = item.authors.map((a) => a._id);
+			authors.value = item.authors.map((a) => a._id);
 		}
 		open.value = true;
 	};

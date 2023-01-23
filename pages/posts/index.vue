@@ -15,7 +15,7 @@
         <div
 				class="flex flex-col items-center justify-between mt-5 space-y-3 md:space-y-0 md:flex-row"
 			>
-				<!-- <div class="relative w-full md:mr-10 grow">
+				<div class="relative w-full md:mr-10 grow">
 					<span class="absolute -translate-y-1/2 top-1/2 left-3">
 						<Icon name="ep:search" size="24" class="text-gray-400" />
 					</span>
@@ -27,9 +27,9 @@
 						id="search"
 						class="pl-11 input"
 					/>
-				</div> -->
+				</div>
 				
-		<div class="flex items-center justify-between h-20 px-3 max-w-7xl">
+		<!-- <div class="flex items-center justify-between h-20 px-3 max-w-7xl">
 			<nav class="flex items-center space-x-2">
 				<template v-for="n in menu" :key="`menuItem${n.name}`">
 					<NuxtLink
@@ -39,7 +39,7 @@
 					>
 				</template>
 			</nav>
-		</div>
+		</div> -->
 				<button
 					@click="steakModal.openModal()"
 					class="w-full py-3.5 md:py-2.5 md:w-auto btn shrink-0"
@@ -114,7 +114,7 @@
 	// Modal refence - used to open modal
 	const steakModal = ref();
 	//Search for record in table
-	// const search = ref("");
+	const search = ref("");
 
 	// headers for the table
 	const headers: Header[] = [
