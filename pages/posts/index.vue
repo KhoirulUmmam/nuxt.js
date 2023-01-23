@@ -114,7 +114,7 @@
 	// Modal refence - used to open modal
 	const steakModal = ref();
 	//Search for record in table
-	const search = ref("");
+	// const search = ref("");
 
 	// headers for the table
 	const headers: Header[] = [

@@ -10,11 +10,11 @@ export const useSteakStore = defineStore("steak-store", {
 	actions: {
 		// Get all steaks from DB
 		async getAll() {
-			try {
+			try{
 				let data = await $fetch<ISteak[]>("/api/steaks");
 				this.steaks = data;
 				return data as ISteak[];
-			} catch (e) {
+			}catch(e) {
 				useToast().error(e.message);
 			}
 		},
