@@ -1,29 +1,37 @@
 import mongoose from "mongoose";
 
-// import schema
+// Steak schema
 const schema: mongoose.Schema = new mongoose.Schema(
     {
-        name: {
+        nama: {
             type: String,
             required: true,
         },
-        shipment: {
+        pengiriman: {
             type: Date,
             required: true,
         },
-        quality: String,
-        imported: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Import",            
-            },
-        ],
-        pageCount: Number,
+        kelurahan: {
+            type: String,
+            required: true,
+        },
+        kecamatan: {
+            type: String,
+            required: true,
+        },
+        kota: {
+            type: String,
+            required: true,
+        },
+        kualitas: {
+            type: String,
+            required: true,
+        },
     },
     {
         timestamps: true
     }
 );
 
-// Import model
-export default mongoose.model("Import", schema);
+// Steak model
+export default mongoose.model("Steak", schema);

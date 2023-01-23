@@ -1,15 +1,11 @@
 import Joi from "joi";
 
-// import validation
-export const ImportSchema = Joi.object({
-    name: Joi.string().min(3).required(),
-});
-
 // steak validation
 export const SteakSchema = Joi.object({
-    name: Joi.string().min(3).required(),
-    quality: Joi.string().min(3).required(),
-    imported: Joi.array(),
-    shipment: Joi.date().required(),
-    pageCount: Joi.number()
+	nama: Joi.string().min(3).required(),
+	kualitas: Joi.string().max(10).required(),
+	kelurahan: Joi.string().min(3).required(),
+	kecamatan: Joi.string().min(3).required(),
+	kota: Joi.string().min(3).required(),
+	pengiriman: Joi.date().required(),
 });

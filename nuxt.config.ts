@@ -4,16 +4,16 @@ export default defineNuxtConfig({
     modules: [
       '@nuxtjs/tailwindcss',
       "nuxt-icon",
-      "@pinia/nuxt"
+      "@pinia/nuxt",
     ],
 
-    tailwindcss: {
-      cssPath: "~/assets/css/tailwindcss.css",
-      configPath: 'tailwind.config',
-      exposeConfig: false,
-      injectPosition: 0,
-      viewer: true,
-    },
+    // tailwindcss: {
+    //   cssPath: "~/assets/css/tailwindcss.css",
+    //   configPath: 'tailwind.config',
+    //   exposeConfig: false,
+    //   injectPosition: 0,
+    //   viewer: true,
+    // },
 
     app: {
       head: {

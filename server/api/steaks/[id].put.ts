@@ -2,7 +2,7 @@ import SteakModel from "~~/server/models/Steak.model";
 import { SteakSchema } from "~~/server/validation";
 
 export default defineEventHandler(async(event) => {
-    const body = await useBody(event);
+    const body = await readBody(event);
     
     // get id from params
     const id = event.context.params.id;

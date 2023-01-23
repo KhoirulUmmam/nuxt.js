@@ -3,7 +3,7 @@ import { SteakSchema } from "~~/server/validation";
 
 export default defineEventHandler(async(event) => {
     // get data form body
-    const body = await useBody(event);
+    const body = await readBody(event);
 
     // validate
     let { error } = SteakSchema.validate(body);
