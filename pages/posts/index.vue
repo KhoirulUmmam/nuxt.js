@@ -137,6 +137,9 @@
 		{ name: "Steaks", link: "/posts" },
 	]);
 
+	// Wilayah
+	const { data: wilayah } = await useFetch('/api/wilayah')
+
 //     export default {
 //         data(){
 //             return {
