@@ -100,7 +100,7 @@
 
     definePageMeta({
         layout: 'posts'
-    })
+    });
 
     const { data: steaks } = await useFetch('api/steak')
 
